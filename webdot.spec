@@ -1,12 +1,12 @@
 Summary:	A CGI graph server script that uses tcldot utility
 Summary(pl):	Skrypt serwerowy CGI do grafów u¿ywaj±cy narzêdzia tcldot
 Name:		webdot
-Version:	1.10
+Version:	1.10.1
 Release:	1
 Group:		Applications/Graphics
 License:	BSD-like
 Source0:	http://www.graphviz.org/pub/graphviz/%{name}-%{version}.tar.gz
-# Source0-md5:	f15fed83c0e9584a8d83e6748154e7c3
+# Source0-md5:	f3104f0df17acc984ef8393099b22dac
 Patch0:		%{name}-status.patch
 URL:		http://www.graphviz.org/
 # it wants to open "Times" font by filename
