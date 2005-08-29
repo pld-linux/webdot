@@ -5,7 +5,7 @@ Version:	1.10.2
 Release:	1
 Group:		Applications/Graphics
 License:	BSD-like
-Source0:	http://www.graphviz.org/pub/graphviz/%{name}-%{version}.tar.gz
+Source0:	http://www.graphviz.org/pub/graphviz/ARCHIVE/%{name}-%{version}.tar.gz
 # Source0-md5:	ae561fa9963b81a8f543fc1ec8cb5505
 Patch0:		%{name}-status.patch
 URL:		http://www.graphviz.org/
