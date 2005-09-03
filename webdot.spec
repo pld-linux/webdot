@@ -1,14 +1,15 @@
 Summary:	A CGI graph server script that uses tcldot utility
 Summary(pl):	Skrypt serwerowy CGI do grafów u¿ywaj±cy narzêdzia tcldot
 Name:		webdot
-Version:	1.10.2
+Version:	2.6
 Release:	1
 Group:		Applications/Graphics
 License:	BSD-like
 Source0:	http://www.graphviz.org/pub/graphviz/ARCHIVE/%{name}-%{version}.tar.gz
-# Source0-md5:	ae561fa9963b81a8f543fc1ec8cb5505
+# Source0-md5:	dbf6712c9a5fd069defeeb58d081ee86
 Patch0:		%{name}-status.patch
 URL:		http://www.graphviz.org/
+Requires:	FHS >= 2.3-12
 # it wants to open "Times" font by filename
 Requires:	fonts-TTF-microsoft
 Requires:	graphviz-tcl
@@ -18,9 +19,8 @@ Requires:	webserver
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		httpdir		/home/services/httpd
-%define		htmldir		%{httpdir}/html
-%define		cgibindir	%{httpdir}/cgi-bin
+%define		appdir		%{_datadir}/webdot
+%define		cgibindir	%{_prefix}/lib/cgi-bin
 %define		cachedir	/var/cache/webdot
 %define		tcldotlib	/usr/%{_lib}/graphviz/libtcldot.so
 
@@ -41,8 +41,8 @@ find . -type d -name CVS | xargs rm -rf
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{cgibindir},%{htmldir},%{cachedir}}
-cp -r html/webdot $RPM_BUILD_ROOT%{htmldir}
+install -d $RPM_BUILD_ROOT{%{cgibindir},%{appdir},%{cachedir}}
+cp -r html/webdot/* $RPM_BUILD_ROOT%{appdir}
 
 cat > $RPM_BUILD_ROOT%{cgibindir}/webdot <<'EOF'
 #!/usr/bin/tclsh
@@ -61,5 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS CHANGES COPYING README
 %attr(755,root,root) %{cgibindir}/webdot
-%{htmldir}/webdot
+%{appdir}
 %attr(770,root,http) %{cachedir}
