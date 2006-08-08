@@ -35,7 +35,7 @@ href wskazuje na plik .dot. U¿ywa Tcldot z pakietu graphviz-tcl.
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
 
 find . -type d -name CVS | xargs rm -rf
 
