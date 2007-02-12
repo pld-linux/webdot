@@ -1,5 +1,5 @@
 Summary:	A CGI graph server script that uses tcldot utility
-Summary(pl):	Skrypt serwerowy CGI do grafów u¿ywaj±cy narzêdzia tcldot
+Summary(pl.UTF-8):   Skrypt serwerowy CGI do grafÃ³w uÅ¼ywajÄ…cy narzÄ™dzia tcldot
 Name:		webdot
 Version:	2.8
 Release:	2
@@ -29,9 +29,9 @@ A cgi-bin program that produces clickable graphs in web pages when
 provided with an href to a .dot file. Uses Tcldot from the
 graphviz-tcl package.
 
-%description -l pl
-webdot to program CGI tworz±cy klikalne grafy na stronach WWW kiedy
-href wskazuje na plik .dot. U¿ywa Tcldot z pakietu graphviz-tcl.
+%description -l pl.UTF-8
+webdot to program CGI tworzÄ…cy klikalne grafy na stronach WWW kiedy
+href wskazuje na plik .dot. UÅ¼ywa Tcldot z pakietu graphviz-tcl.
 
 %prep
 %setup -q
