@@ -1,5 +1,5 @@
 Summary:	A CGI graph server script that uses tcldot utility
-Summary(pl.UTF-8):   Skrypt serwerowy CGI do grafów używający narzędzia tcldot
+Summary(pl.UTF-8):	Skrypt serwerowy CGI do grafów używający narzędzia tcldot
 Name:		webdot
 Version:	2.8
 Release:	2
