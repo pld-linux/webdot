@@ -1,18 +1,18 @@
 Summary:	A CGI graph server script that uses tcldot utility
 Summary(pl.UTF-8):	Skrypt serwerowy CGI do grafów używający narzędzia tcldot
 Name:		webdot
-Version:	2.8
-Release:	2
+Version:	2.10
+Release:	1
 Group:		Applications/Graphics
 License:	BSD-like
 Source0:	http://www.graphviz.org/pub/graphviz/ARCHIVE/%{name}-%{version}.tar.gz
-# Source0-md5:	579259e243223c07b6b30edb8d445dcc
+# Source0-md5:	8a5e8a039f8e40603a9971d527892442
 Patch0:		%{name}-status.patch
 URL:		http://www.graphviz.org/
 Requires:	filesystem >= 3.0-11
 # it wants to open "Times" font by filename
 Requires:	fonts-TTF-microsoft
-Requires:	graphviz-tcl >= 2.8
+Requires:	graphviz-tcl >= 2.10
 Requires:	ghostscript
 Requires:	tcl
 Requires:	webserver
