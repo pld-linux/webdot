@@ -1,12 +1,12 @@
 Summary:	A CGI graph server script that uses tcldot utility
 Summary(pl.UTF-8):	Skrypt serwerowy CGI do grafów używający narzędzia tcldot
 Name:		webdot
-Version:	2.16
+Version:	2.22
 Release:	1
 Group:		Applications/Graphics
 License:	BSD-like
 Source0:	http://www.graphviz.org/pub/graphviz/ARCHIVE/%{name}-%{version}.tar.gz
-# Source0-md5:	25d495ca878b9af8df6370847c07e456
+# Source0-md5:	6acbb009daf32dd1ae9a004f6fce7ac7
 Patch0:		%{name}-status.patch
 URL:		http://www.graphviz.org/
 Requires:	filesystem >= 3.0-11
